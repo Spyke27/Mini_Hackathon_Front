@@ -1,0 +1,89 @@
+*{
+    text-decoration: none !important;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    min-height: 100vh;
+    padding: 0px !important;
+    padding-bottom: 20px !important;
+}
+.logoProjeto{
+    height: 250px;
+}
+.cardProjeto{
+    width: 560px;
+    height: 560px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 20px;
+    position: relative;
+    background-color: #ccc;
+    padding: 5px;
+}
+.nomeElink{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nomeProjeto{
+    font-weight: bold !important;
+    color: #333;
+    margin-top: 8px !important;
+}
+.a{
+    display: flex;
+}
+span{
+    width: 10px;
+    height: 50px;
+    background-color: #333;
+    margin-right: 5px;
+    border-radius: 2px;
+}
+.btnProjeto{
+    cursor: pointer;
+    background-color: #222;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 2px;
+    font-weight: bold;
+    text-transform: uppercase;
+    opacity: .8;
+    transition: .4s;
+}
+.btnProjeto:hover{
+    opacity: 1;
+}
+.pitProjeto{
+    margin-top: 20px !important;
+    max-height: 100%;
+}
+.btnOptions{
+    display: flex;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.btnOptions img{
+    width: 22px;
+    height: 22px;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 3px;
+    border: .5px solid #ccc;
+    opacity: .8;
+    transition: .4s;
+}
+.btnHover:hover{
+    opacity: 1;
+}
+.btnOptions img:hover{
+    border: 3px solid #ccc;
+}
