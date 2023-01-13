@@ -49,7 +49,7 @@ return (
                     </div>
                     <button className="btnProjeto">Projeto</button>
                   </div>
-                  <p className="numeroGrupo">Grupo: {projeto.grupo?.numeroGrupo}3</p>
+                  <p className="numeroGrupo">Grupo: {projeto.grupo?.numeroGrupo}?</p>
                
                 <Typography className="pitProjeto">
                   <strong>Descrição:</strong> <br />

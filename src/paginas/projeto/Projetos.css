@@ -9,7 +9,7 @@
 h1{
     font-family: Helvetica, sans-serif;
     font-weight: bold;
-    font-size: 70px;
+    font-size: 50px;
     text-align: center;
     color: #222;
 }
@@ -45,7 +45,6 @@ h1{
     margin-top: 8px !important;
 }
 .numeroGrupo{
-    font-size: 17px;
     color: #222;
     background-color: lightblue;
     padding: 3px 6px;
