@@ -3,13 +3,22 @@
     margin: 0;
     padding: 0;
 }
+.container{
+    background-color: lightblue !important;
+}
+h1{
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 70px;
+    text-align: center;
+    color: #222;
+}
 .containerProjeto{
     display: flex;
     justify-content: center;
     min-height: 100vh;
     padding: 0px !important;
     padding-bottom: 20px !important;
-    background-color: lightblue !important;
 }
 .cardProjeto{
     width: 520px;
@@ -25,6 +34,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 10px;
 }
 .logoProjeto{
     height: 280px;
@@ -33,6 +43,14 @@
     font-weight: bold !important;
     color: #333;
     margin-top: 8px !important;
+}
+.numeroGrupo{
+    font-size: 17px;
+    color: #222;
+    background-color: lightblue;
+    padding: 3px 6px;
+    border-radius: 2px;
+    display: inline-block;
 }
 .a{
     display: flex;
@@ -60,7 +78,7 @@ span{
     opacity: 1;
 }
 .pitProjeto{
-    margin-top: 20px !important;
+    margin-top: 10px !important;
     max-height: 100%;
 }
 .btnOptions{

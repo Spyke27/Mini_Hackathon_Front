@@ -1,21 +1,19 @@
 import React, { useEffect, useState } from "react";
 import {
   Box,
-  Button,
   Card,
   CardActions,
   CardContent,
   CardMedia,
-  Link,
-  Theme,
   Typography
 } from "@material-ui/core";
 import Projeto from "../../model/Projeto";
 import "./Projetos.css";
-import Teste from "./teste.jpg";
+/* import Teste from "./teste.jpg"; */
 import Edit from "./edit.svg";
 import Delete from "./delete.svg";
 import { busca } from "../../service/Service";
+
 
 function Projetos() { 
 
@@ -29,7 +27,8 @@ function Projetos() {
     }, [projeto.length]);
 
 return (
-    <>
+    <div className="container">
+    <h1>Projetos Generation</h1>
       <Box className="containerProjeto">
             {projeto.map((projeto) => (
               <Card className="cardProjeto">
@@ -50,6 +49,7 @@ return (
                     </div>
                     <button className="btnProjeto">Projeto</button>
                   </div>
+                  <p className="numeroGrupo">Grupo: {projeto.grupo?.numeroGrupo}3</p>
                
                 <Typography className="pitProjeto">
                   <strong>Descrição:</strong> <br />
@@ -75,7 +75,7 @@ return (
               </Card>
          ))}
       </Box>
-    </>
+    </div>
   );
 } 
 export default Projetos;
