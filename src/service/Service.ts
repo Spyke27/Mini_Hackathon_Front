@@ -1,23 +1,17 @@
 import axios from "axios";
 
 export const api = axios.create({
-    baseURL: 'https:localhost:4000/' /* conexão com a api */
+    baseURL: 'http://localhost:4000/' /* conexão com a api */
 });
 
-/* LOGIN */
-export const login = async (url: any, dados: any, setDado: any) =>{
-    const resposta = await api.post(url, dados);
-    
-    setDado(resposta.data.token); 
-}
 /* CADASTRO */
-export const cadastroUsuario = async (url: any, dados: any, setDado: any) =>{
+export const cadastroProjeto = async (url: any, dados: any, setDado: any) =>{
     const resposta = await api.post(url, dados);
     setDado(resposta.data); 
 }
 /* BUSCAR */
-export const busca = async (url: any, setDado: any, header: any) => {
-    const resposta = await api.get(url, header)
+export const busca = async (url: any, setDado: any) => {
+    const resposta = await api.get(url)
     setDado(resposta.data);
 }
 /* BUSCAR POR ID */

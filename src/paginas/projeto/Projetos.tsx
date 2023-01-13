@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Box,
   Button,
@@ -15,21 +15,29 @@ import "./Projetos.css";
 import Teste from "./teste.jpg";
 import Edit from "./edit.svg";
 import Delete from "./delete.svg";
+import { busca } from "../../service/Service";
 
 function Projetos() { 
 
     const [projeto, setProjeto] = useState<Projeto[]>([]);
 
+    async function getProjeto() {
+      await busca("/projetos/all", setProjeto);
+    }
+    useEffect(() => {
+      getProjeto();
+    }, [projeto.length]);
+
 return (
     <>
       <Box className="containerProjeto">
-          {/*  {projeto.map((projeto) => ( */}
+            {projeto.map((projeto) => (
               <Card className="cardProjeto">
                 <CardMedia
                 className="logoProjeto"
                 component="img"
                 width="100%"
-                image={Teste}
+                image={projeto.logoProjeto}
                 alt="Logo do Projeto"
               />
                 <CardContent>
@@ -37,20 +45,15 @@ return (
                     <div className="a">
                       <span></span>
                       <Typography className="nomeProjeto" variant="h4" component="div">
-                      GreenShop
+                          {projeto.nomeProjeto}
                       </Typography>
                     </div>
-                  
-
-                <a href="#linkdoprojeto">
                     <button className="btnProjeto">Projeto</button>
-                </a>
                   </div>
                
                 <Typography className="pitProjeto">
                   <strong>Descrição:</strong> <br />
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex dolorum accusamus ducimus blanditiis ipsum eius placeat culpa, perspiciatis deserunt veniam vitae quia, tempora ab nobis quis iste repellendus minima rem?
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque labore ipsum architecto. Et nihil consectetur quidem amet obcaecati, ipsum vel maxime
+                  {projeto.pitProjeto}
                 </Typography>
               </CardContent>
               <CardActions>
@@ -70,7 +73,7 @@ return (
               </Box>
               </CardActions>
               </Card>
-         {/* ))} */}
+         ))}
       </Box>
     </>
   );
